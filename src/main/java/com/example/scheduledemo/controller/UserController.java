@@ -4,6 +4,7 @@ import com.example.scheduledemo.entity.User;
 import com.example.scheduledemo.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +20,7 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("/signup")
-    public ResponseEntity<User> signUp(@RequestBody User user) {
+    public ResponseEntity<User> signUp(@Valid @RequestBody User user) {
         return ResponseEntity.ok(userService.signUp(user));
     }
 

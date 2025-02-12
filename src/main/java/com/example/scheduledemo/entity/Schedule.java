@@ -1,6 +1,7 @@
 package com.example.scheduledemo.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,9 +15,11 @@ public class Schedule extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "제목은 필수 입력입니다.")
     @Column(nullable = false)
     private String title;
 
+    @NotBlank(message = "내용은 필수 입력 항목입니다.")
     @Column(columnDefinition = "longtext")
     private String contents;
 

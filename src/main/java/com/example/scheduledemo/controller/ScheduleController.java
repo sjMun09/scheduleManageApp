@@ -3,6 +3,7 @@ package com.example.scheduledemo.controller;
 import com.example.scheduledemo.entity.Schedule;
 import com.example.scheduledemo.entity.User;
 import com.example.scheduledemo.service.ScheduleService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
@@ -19,7 +20,7 @@ public class ScheduleController {
     private final ScheduleService scheduleService;
 
     @PostMapping
-    public ResponseEntity<?> createSchedule(@RequestBody Schedule schedule) {
+    public ResponseEntity<?> createSchedule(@Valid @RequestBody Schedule schedule) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication == null || authentication.getPrincipal() == null || !(authentication.getPrincipal() instanceof User)) {
             return ResponseEntity.status(403).body("{\"message\": \"로그인이 필요합니다.\"}");
