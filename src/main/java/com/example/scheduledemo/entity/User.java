@@ -2,11 +2,12 @@ package com.example.scheduledemo.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Getter @Setter @NoArgsConstructor
@@ -24,6 +25,7 @@ public class User extends BaseEntity {
 
     @NotBlank(message = "이메일은 필수 입력 항목입니다.")
     @Email(message = "유효한 이메일 형식이어야 합니다.")
+    @Pattern(regexp = "^[A-Za-z0-9+_.-]+@(.+)$", message = "이메일 형식이 올바르지 않습니다.")
     @Column(nullable = false, unique = true)
     private String email;
 

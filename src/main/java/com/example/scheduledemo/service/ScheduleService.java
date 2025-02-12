@@ -19,13 +19,13 @@ public class ScheduleService {
 
     @Transactional
     public Schedule createSchedule(Long userId, Schedule schedule) {
-        User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
+        User user = userRepository.findById(userId).orElseThrow(() -> new RuntimeException("유저를 찾을 수 없습니다."));
         schedule.setUser(user);
         return scheduleRepository.save(schedule);
     }
 
     public Schedule getSchedule(Long scheduleId) {
-        return scheduleRepository.findById(scheduleId).orElseThrow(() -> new RuntimeException("Schedule not found"));
+        return scheduleRepository.findById(scheduleId).orElseThrow(() -> new RuntimeException("일정을 찾을 수 없습니다."));
     }
 
     public List<Schedule> getAllSchedules() {
