@@ -88,9 +88,20 @@ Response
     "content": "좋은 일정이네요!",
     "user": { "id": 1, "username": "user1" },
     "schedule": { "id": 1, "title": "회의 일정" },
-    "createdAt": "2024-02-11T12:15:00"
+    "createdAt": "2025-02-11T12:15:00"
 }
 ```
+
+<hr>
+
+# 다이어그램
+### ERD
+![image](https://github.com/user-attachments/assets/2d636399-ed4c-469a-b506-ce1514c7c505)
+
+
+### 시퀀스 다이어그램
+<img width="1066" alt="image" src="https://github.com/user-attachments/assets/7d46caa3-fbb9-4f7f-bd0f-efd9abcced56" />
+
 
 <hr>
 
