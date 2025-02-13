@@ -118,6 +118,48 @@ Response
 
 <hr>
 
+# SQL
+### User
+```
+    create table users (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        username varchar(20) not null,
+        email varchar(255) not null,
+        password varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+```
+
+### Schedule
+```
+    create table schedules (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        updated_at datetime(6),
+        user_id bigint not null,
+        contents longtext not null,
+        title varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+```
+
+### comment
+```
+    create table comments (
+        created_at datetime(6),
+        id bigint not null auto_increment,
+        schedule_id bigint not null,
+        updated_at datetime(6),
+        user_id bigint not null,
+        content varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+```
+
+<hr>
+
 # 트러블 슈팅 (깃헙)
 작업을 새벽에 마무리 했으나, pr이 안 돼서, 
 
