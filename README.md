@@ -1,5 +1,19 @@
 # scheduleManageApp
 
+# 개발 환경
+- **Language**: Java 17
+- **Framework**: Spring Boot 3.3.2
+- **IDE**: IntelliJ IDEA
+- **Database**: MySQL 8.0.32
+- **ORM**: Spring Data JPA
+- **Authentication**: Spring Security (Session-based)
+- **Build Tool**: Gradle / Maven
+- **Validation**: Bean Validation (Jakarta Validation)
+
+
+<hr>
+
+### 기능 구현 과제
 - [ ] Lv 0. API 명세 및 ERD 작성 <br>
 - [ ] Lv 1. 일정 CRUD <br>
 - [ ] Lv 2. 유저 CRUD<br>
@@ -9,6 +23,8 @@
 - [ ] Lv 6. 비밀번호 암호화<br>
 - [ ] Lv 7. 댓글 CRUD<br>
 - [ ] Lv 8. 일정 페이징 조회<br>
+
+<hr>
 
 ### 목표
 
