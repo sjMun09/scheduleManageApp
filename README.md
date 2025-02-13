@@ -1,4 +1,95 @@
 # scheduleManageApp
+<챕터 목표>
+1. Spring의 핵심 컨셉에 대해 이해하고 설명할 수 있다.
+2. BeanValidation을 적용할 수 있다.
+3. 인증/인가의 차이점을 설명할 수 있다.
+4. Cookie/Session을 적용하여 사용자 인증을 할 수 있다.
+5. 영속성 컨텍스트에 대해 설명할 수 있다.
+6. JPA를 이용하여 데이터 중심이 아닌 객체 지향적인 개발을 할 수 있다.
+
+<hr>
+# API 명세
+
+### 1) 회원가입 API
+- URL: /api/users/signup
+- Method: POST
+- Request Body
+```
+{
+    "username": "user1",
+    "email": "user1@example.com",
+    "password": "password123"
+}
+```
+
+- Response
+```
+{
+    "id": 1,
+    "username": "user1",
+    "email": "user1@example.com",
+    "createdAt": "2025-02-11T12:00:00",
+    "updatedAt": "2025-02-11T12:00:00"
+}
+```
+### 2) 로그인 API
+- URL: /api/users/login
+- Method: POST
+- Request Body
+```
+{
+    "email": "user1@example.com",
+    "password": "password123"
+}
+```
+- Response
+```
+{
+    "message": "로그인 성공"
+}
+```
+
+### 3) 일정 생성 API
+- URL: /api/schedules
+- Method: POST
+- Request Body
+```
+{
+    "title": "회의 일정",
+    "contents": "오후 3시 팀 미팅"
+}
+```
+Response
+```
+{
+    "id": 1,
+    "title": "회의 일정",
+    "contents": "오후 3시 팀 미팅",
+    "user": { "id": 1, "username": "user1" },
+    "createdAt": "2025-02-11T12:10:00",
+    "updatedAt": "2025-02-11T12:10:00"
+}
+```
+### 4) 댓글 생성 API
+- URL: /api/comments
+- Method: POST
+- Request Body
+```
+{
+    "content": "좋은 일정이네요!",
+    "scheduleId": 1
+}
+```
+Response
+```
+{
+    "id": 1,
+    "content": "좋은 일정이네요!",
+    "user": { "id": 1, "username": "user1" },
+    "schedule": { "id": 1, "title": "회의 일정" },
+    "createdAt": "2024-02-11T12:15:00"
+}
+```
 
 <hr>
 
