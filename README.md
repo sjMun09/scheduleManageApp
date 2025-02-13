@@ -1,4 +1,17 @@
 # scheduleManageApp
+
+- [ ] Lv 0. API 명세 및 ERD 작성 <br>
+- [ ] Lv 1. 일정 CRUD <br>
+- [ ] Lv 2. 유저 CRUD<br>
+- [ ] Lv 3. 회원가입 <br>
+- [ ] Lv 4. 로그인(인증)<br>
+- [ ] Lv 5. 다양한 예외처리 적용하기 <br>
+- [ ] Lv 6. 비밀번호 암호화<br>
+- [ ] Lv 7. 댓글 CRUD<br>
+- [ ] Lv 8. 일정 페이징 조회<br>
+
+### 목표
+
 <챕터 목표>
 1. Spring의 핵심 컨셉에 대해 이해하고 설명할 수 있다.
 2. BeanValidation을 적용할 수 있다.
