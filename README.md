@@ -183,3 +183,7 @@ git push origin feat --force
 
 3. GitHub에 push할 때는 --force를 주의해서 사용!
 → 실수로 날린 코드가 있다면 git reflog로 복구할 수도 있음.
+
+<hr>
+
+트러블 슈팅 추가 정리 : https://velog.io/@ohoh7391/%EC%9D%BC%EC%A0%95%EA%B4%80%EB%A6%AC-%EC%95%B1-%EA%B3%BC%EC%A0%9C3
